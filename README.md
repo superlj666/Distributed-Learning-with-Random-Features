@@ -35,4 +35,4 @@ Save results produced by scripts.
 3. Run Exp1_partitions.m and Exp1_partitions_draw.m to report classification error and training time in terms of partitions.
 4. Run Exp1_rf.m and Exp1_rf_draw.m to report classification error and training time in terms of the number of random features.
 
-## TODO: More experiments are running.
+<!--## TODO: More experiments are running.-->
