@@ -1,6 +1,7 @@
 # DC_RF
 
-Experiments for paper "[Distributed Learning with Random Features](https://lijian.ac.cn/files/2019_dc_rf.pdf), Jian Li, Yong Liu, Weiping Wang.arXiv preprint arXiv:1906.03155, 2019.", which has been submitted to NIPS 2019.
+## Intro
+Experiments for paper "Distributed Learning with Random Features" (https://arxiv.org/abs/1906.03155).
 
 ## 1. Code structure
 ### folder: ./

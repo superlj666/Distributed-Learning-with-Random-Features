@@ -6,7 +6,7 @@ rand('state', 16);
 n_partitions = [1,50:50:3000];
 D = 500;
 n_repeat = 5;
-data_name = 'HIGGS';
+data_name = 'SUSY';
 [lambda, sigma] = best_parameters(data_name);
 
 load(['./data/', data_name]);
