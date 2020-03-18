@@ -7,8 +7,8 @@ figure(1);
 set(gcf,'Position',[100 100 1000 360]);
 
 % Create a heatmap.
-r = linspace(0.5,1,101);
-gamma = linspace(0,1,101);
+r = linspace(0.5,1,1001);
+gamma = linspace(0,1,1001);
 r_size = length(r);
 gamma_size = length(gamma);
 mat_rf = zeros(r_size, gamma_size);
@@ -40,38 +40,44 @@ for i=1:r_size
 end
 
 subplot('Position',  [0.05, 0.2, 0.25, 0.7]);
-contourf(mat_rf);
+imagesc(mat_rf);
+set(gca, 'YDir', 'normal')
+shading interp
 xlabel('\it r', 'Interpreter', 'latex', 'fontsize', 20);
-xticks(1:20:101)
+xticks(1:200:length(r))
 xticklabels(0.5:0.1:1)
-ylabel('\it \gamma', 'Interpreter', 'tex', 'fontsize', 20, 'Rotation', 15, 'position',[-13 50]);
-yticks(1:10:101)
+ylabel('\it \gamma', 'Interpreter', 'tex', 'fontsize', 20, 'Rotation', 15, 'position',[-150 500]);
+yticks(1:100:length(gamma))
 yticklabels(0:0.1:1)
+colormap(jet(4096)) 
 caxis([0 1])
-colormap jet;
 title('Random Features M=O(N^c)', 'Interpreter', 'tex', 'fontsize', 13);
 
 subplot('Position',  [0.35, 0.2, 0.25, 0.7]);
-contourf(mat_partition);
+imagesc(mat_partition);
+set(gca, 'YDir', 'normal')
+shading interp
 xlabel('\it r', 'Interpreter', 'latex', 'fontsize', 20);
-xticks(1:20:101)
+xticks(1:200:length(r))
 xticklabels(0.5:0.1:1)
-ylabel('\it \gamma', 'Interpreter', 'tex', 'fontsize', 20, 'Rotation', 15, 'position',[-13 50]);
-yticks(1:10:101)
+ylabel('\it \gamma', 'Interpreter', 'tex', 'fontsize', 20, 'Rotation', 15, 'position',[-150 500]);
+yticks(1:100:length(gamma))
 yticklabels(0:0.1:1)
-colormap jet;
+colormap(jet(4096)) 
 caxis([0 1])
 title('The number of partitions m=O(N^c)', 'Interpreter', 'tex', 'fontsize', 13);
 
 subplot('Position',  [0.65, 0.2, 0.25, 0.7]);
-contourf(mat_rate);
+imagesc(mat_rate);
+set(gca, 'YDir', 'normal')
+shading interp
 xlabel('\it r', 'Interpreter', 'latex', 'fontsize', 20);
-xticks(1:20:101)
+xticks(1:200:length(r))
 xticklabels(0.5:0.1:1)
-ylabel('\it \gamma', 'Interpreter', 'tex', 'fontsize', 20, 'Rotation', 15, 'position',[-13 50]);
-yticks(1:10:101)
+ylabel('\it \gamma', 'Interpreter', 'tex', 'fontsize', 20, 'Rotation', 15, 'position',[-150 500]);
+yticks(1:100:length(gamma))
 yticklabels(0:0.1:1)
-colormap jet;
+colormap(jet(4096)) 
 caxis([0 1])
 title('Learning rate O(N^{-c})', 'Interpreter', 'tex', 'fontsize', 13);
 
